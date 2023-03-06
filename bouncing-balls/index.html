@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Bouncing Ball</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #click {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      #instructions {
+        animation: blink 1s infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="click">
+      <div id="instructions">
+        <p>Click for Balls</p>
+      </div>
+    </div>
+    <canvas></canvas>
+    <script src="app.js"></script>
+  </body>
+</html>
